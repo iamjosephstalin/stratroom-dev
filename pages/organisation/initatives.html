@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<a lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+        <title>StratRoom</title>
+        <!-- Favicon-->
+        <!-- <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon"> -->
+        <!-- Plugins Core Css -->
+        <link href="../../assets/css/app.min.css" rel="stylesheet">
+        <!-- Custom Css -->
+        <link href="../../assets/css/style.css" rel="stylesheet" />
+        <link href="../../assets/css/initatives.css" rel="stylesheet" />
+        <link href="../../assets/css/startroom/wedgets.css" rel="stylesheet" />
+        <!-- You can choose a theme from css/styles instead of get all themes -->
+        <link href="../../assets/css/styles/all-themes.css" rel="stylesheet" />
+        <!-- <link href="../../assets/css/table-view.css" rel="stylesheet" /> -->
+        <link rel="stylesheet" href="../../assets/daterangepicker.css">
+        <link href="../../assets/jquery-ui.min.css" rel="stylesheet">
+
+    </head>
+
+    <body class="light">
+
+        <!-- Page Loader -->
+        <div class="page-loader-wrapper">
+            <div class="loader">
+                <div class="m-t-30">
+                    <img class="loading-img-spin" src="../../assets/images/loading.png" alt="admin">
+                </div>
+                <p>Please wait...</p>
+            </div>
+        </div>
+        <!-- <div>
+            <img src="../../assets/images/SP_Bg.png" alt="">
+        </div> -->
+        <!-- #END# Page Loader -->
+        <!-- Overlay For Sidebars -->
+        <div class="overlay"></div>
+        <!-- #END# Overlay For Sidebars -->
+        <!-- Top Bar -->
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a href="#" onClick="return false;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                    <a href="#" onClick="return false;" class="bars"></a>
+                    <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"><i class="nav-hdr-btn ti-menu" style="color: #000"></i></a>
+                    <a class="navbar-brand nav_float" href="#">
+                        <span class="logo-name">StratRoom</span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar-collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="fullscreen" style="padding: 4px;left: -14px;">
+                            <ul class="list-unstyled order-list">
+                                <li class="avatar avatar-sm">
+                                    <img class="rounded-circle" src="../../assets/images/user/user7.jpg" alt="user">
+                                </li>
+                                <li class="avatar avatar-sm">
+                                    <img class="rounded-circle" src="../../assets/images/user/user8.jpg" alt="user">
+                                </li>
+                                <li class="avatar avatar-sm">
+                                    <img class="rounded-circle" src="../../assets/images/user/user9.jpg" alt="user">
+                                </li>
+                                <li class="avatar avatar-sm">
+                                    <img class="rounded-circle" src="../../assets/images/user/user9.jpg" alt="user">
+                                </li>
+                                <li _ngcontent-hhc-c5="" class="avatar avatar-sm"><span _ngcontent-hhc-c5="" class="badge">+3</span></li>
+                            </ul>
+                        </li>
+                        <li class="fullscreen">
+                            <form class="form-header" action="" method="POST">
+                                <input class="au-input au-input--xl" style="min-width: 20%" type="text" name="search" placeholder="Search">
+                                <button class="au-btn--submit" type="submit">
+                            <i class="fa fa-search" style="color:gray"></i>
+                            </button>
+                            </form>
+                        </li>
+                        <li class="fullscreen">
+                            <a href="" class="">
+                                <i class="nav-hdr-btn ti-calendar" style="color: gray"></i>
+                            </a>
+                        </li>
+                        <!-- #END# Full Screen Button -->
+                        <!-- #START# Notifications-->
+                        <li class="dropdown">
+                            <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="nav-hdr-btn ti-bell" style="color: gray"></i>
+                                <span class="notify"></span>
+                                <span class="heartbeat"></span>
+                            </a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                                <i class="nav-hdr-btn ti-settings" style="color: gray"></i>
+                                <span class="notify"></span>
+                                <span class="heartbeat"></span>
+                            </a>
+                        </li>
+                        <!-- #END# Notifications-->
+                        <li class="">
+                            <a href="#" onclick="return false;" class=" dropdown-toggle js-right-sidebar" data-close="true">
+                                <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                                <i class="fas fa-user-circle"></i> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- #Top Bar -->
+        <div>
+            <!-- Left Sidebar -->
+            <aside id="leftsidebar" class="sidebar">
+                <!-- Menu -->
+                <div class="menu">
+                    <ul class="list">
+                        <li class="active">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-home"></i>
+                                <span>Organisation Structure</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" onClick="return false;" class="menu-toggle">
+                                <i class="menu-icon ti-image"></i>
+                                <span>Dashboards</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="#">BSC Dashboard</a>
+                                </li>
+                                <li>
+                                    <a href="#">Strategy Map</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-bar-chart"></i>
+                                <span>Charts</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-key"></i>
+                                <span>Users & Access</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-vector"></i>
+                                <span>Workflows</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-bell"></i>
+                                <span>Notifications & Alerts</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-server"></i>
+                                <span>Data Management</span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" onClick="return false;" class="menu-toggle">
+                                <i class="menu-icon ti-layout-media-right-alt"></i>
+                                <span>Template Management</span>
+                            </a>
+                            <ul class="ml-menu">
+                                <li>
+                                    <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                            Scorecard Layout Options
+                                        </a>
+                                    <ul class="ml-menu">
+                                        <li><a href="#">Standard BSC View</a></li>
+                                        <li><a href="#">Dashboard View</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                        Initiative
+                                        </a>
+                                    <ul class="ml-menu">
+                                        <li><a href="#">Sub Initiatives</a></li>
+                                        <li><a href="#">Tasks</a></li>
+                                        <li><a href="#">Activities</a></li>
+                                        <li><a href="#">Milestones</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Reports Table</a>
+                                </li>
+                                <li>
+                                    <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                        Comments
+                                        </a>
+                                    <ul class="ml-menu">
+                                        <li><a href="#">Comments & Observations</a></li>
+                                        <li><a href="#">Proof of Evidence</a></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">Employee Layout</a>
+                                </li>
+                                <li>
+                                    <a href="#">Appraisal</a>
+                                </li>
+                                <li>
+                                    <a href="#">Data Collection Form</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-home"></i>
+                                <span>Widget Management</span>
+                            </a>
+                        </li>
+
+                        <li class="">
+                            <a href="#" onClick="return false;" class="">
+                                <i class="menu-icon ti-pie-chart"></i>
+                                <span>Reports</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- #Menu -->
+            </aside>
+            <!-- #END# Left Sidebar -->
+            <!-- Right Sidebar -->
+            <aside id="rightsidebar" class="right-sidebar open">
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane in active in active stretchLeft" id="skins">
+                        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+                            <div class="demo-skin" style="overflow: hidden; width: auto; height: auto;">
+                                <div class="rightSetting">
+                                    <p class="left">Profile</p>
+                                    <a href="#">
+                                        <p class="right editProfile">Edit</p>
+                                        <p class="right editProfile"></p>
+                                    </a>
+                                    <ul class="setting-list profile-default list-unstyled m-t-20 center">
+                                        <!-- <li class="center">
+                                                <i class="fas fa-user-circle" style="font-size: 110px"></i>
+                                            </li> -->
+                                        <li _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px">
+                                            <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                        </li>
+                                        <li>
+                                            <p class="center name">Karthick, C001</p>
+                                        </li>
+                                        <li>
+                                            <p class="center grey1">Manager, Chennai, TN, India</p>
+                                        </li>
+                                        <li>
+                                            <p class="center grey1">karthick@stratroom.com</p>
+                                        </li>
+                                    </ul>
+                                    <ul class="setting-list profile-replace list-unstyled m-t-20" style="display: none">
+                                        <li class="center">
+                                            <form id="profileForm">
+                                                <div class="form-group">
+                                                    <div class="form-line profile-pic">
+                                                        <!-- <i  class="fas fa-user-circle" style="font-size: 100px; opacity:0.5"></i> -->
+                                                        <li id="profileImage" _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px; z-index:-1">
+                                                            <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                        </li>
+                                                        <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture="">
+                                                        <div class="edit"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+                                                    </div>
+                                                    <div class="form-line">
+                                                        <label for="name" class="left">Name</label>
+                                                        <input type="text" name="name" class="form-control">
+                                                    </div>
+                                                    <div class="form-line">
+                                                        <label for="id" class="left">Employee ID</label>
+                                                        <input type="text" name="id" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-line">
+                                                        <label for="title" class="left">Title</label>
+                                                        <input type="text" name="title" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-line">
+                                                        <label for="email" class="left">Email</label>
+                                                        <input type="email" name="email" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-line">
+                                                        <label for="location" class="left">Location</label>
+                                                        <input type="text" name="location" class="form-control">
+                                                    </div>
+
+                                                    <div class="form-line center">
+                                                        <button class="btn-default1 btn cancelEditProfile" value="Cancel">Cancel</button>
+                                                        <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                    </div>
+
+                                                </div>
+                                            </form>
+                                        </li>
+                                        <li>
+                                            <!-- <p class="center name">Karthick</p> -->
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="row clearfix">
+                                    <!-- Basic Examples -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="">
+                                            <div class="body">
+                                                <div class="row clearfix">
+                                                    <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                        <div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading profile_report" role="tab" id="headingOne_1">
+                                                                    <h4 class="panel-title">
+                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1">
+                                                                                Reporting To
+                                                                            </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1">
+                                                                    <div class="panel-body profile_edit">
+                                                                        <div class="rightSetting">
+                                                                            <!-- <p class="left">Reporting To</p> -->
+                                                                            <a href="#" id="reportingAdd">
+                                                                                <p class="right">Add</p>
+                                                                            </a>
+                                                                            <ul class="setting-list reporting-default list-unstyled m-t-20">
+                                                                                <li class="row reportingRow">
+                                                                                    <div class="col-md-3 p-b-10">
+                                                                                        <!-- <li id="profileImage" _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px; z-index:-1"> -->
+                                                                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                        <!-- </li> -->
+                                                                                    </div>
+                                                                                    <div class="col-md-7 p-t-5">
+                                                                                        <p class="center name">Arun</p>
+                                                                                        <p class="center grey1">Developer</p>
+
+                                                                                    </div>
+                                                                                    <div class="col-md-1" style="float: right;">
+                                                                                        <a href="#" class="reportingEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row reportingRow">
+                                                                                    <div class="col-md-3 p-b-10">
+                                                                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig8.jpg">
+                                                                                    </div>
+                                                                                    <div class="col-md-7 p-t-5">
+                                                                                        <p class="center name">Santhosh</p>
+                                                                                        <p class="center grey1">CTO</p>
+                                                                                    </div>
+                                                                                    <div class="col-md-1" style="float: right;">
+                                                                                        <a href="#" class="reportingEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <ul class="setting-list reporting-replace-add list-unstyled m-t-20" style="display:none">
+                                                                                <li class="row">
+                                                                                    <form id="reportingAddForm">
+                                                                                        <div class="form-group">
+                                                                                            <div class="form-line center profile-pic">
+                                                                                                <img _ngcontent-hhc-c5="" alt="user" width="60" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                                <input id="reportingImageUpload" type="file" name="profile_photo1" placeholder="Photo" required="" capture="">
+                                                                                                <div class="edit1"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+                                                                                            </div>
+                                                                                            <div class="form-line">
+                                                                                                <label for="name" class="left">Name</label>
+                                                                                                <input type="text" name="name" class="form-control">
+                                                                                            </div>
+                                                                                            <div class="form-line">
+                                                                                                <label for="title" class="left">Title</label>
+                                                                                                <input type="text" name="title" class="form-control">
+                                                                                            </div>
+
+                                                                                            <div class="form-line center">
+                                                                                                <button class="btn-default1 btn canceladdReporting" value="Cancel">Cancel</button>
+                                                                                                <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <!-- Basic Examples -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="">
+                                            <div class="body">
+                                                <div class="row clearfix">
+                                                    <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                        <div class="panel-group" id="accordion_2" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading profile_direct" role="tab" id="headingOne_2">
+                                                                    <h4 class="panel-title">
+                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion_2" href="#collapseOne_2" aria-expanded="true" aria-controls="collapseOne_2">
+                                                                                Direct Reportees
+                                                                            </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="collapseOne_2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_2">
+                                                                    <div class="panel-body profile_edit">
+                                                                        <div class="rightSetting">
+                                                                            <!-- <p class="left">Direct Reportees</p> -->
+                                                                            <a href="#" id="directAdd">
+                                                                                <p class="right">Add</p>
+                                                                            </a>
+                                                                            <ul class="setting-list direct-default list-unstyled m-t-20">
+                                                                                <li class="row reportingRow">
+                                                                                    <div class="col-md-3 p-b-10">
+                                                                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig6.jpg">
+                                                                                    </div>
+                                                                                    <div class="col-md-7 p-t-5">
+                                                                                        <p class="center name">Karthick</p>
+                                                                                        <p class="center grey1">Manager</p>
+
+                                                                                    </div>
+                                                                                    <div class="col-md-1" style="float: right;">
+                                                                                        <a href="#" class="directEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                                <li class="row reportingRow">
+                                                                                    <div class="col-md-3 p-b-10">
+                                                                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig9.jpg">
+                                                                                    </div>
+                                                                                    <div class="col-md-7 p-t-5">
+                                                                                        <p class="center name">Naren</p>
+                                                                                        <p class="center grey1">Designer</p>
+
+                                                                                    </div>
+                                                                                    <div class="col-md-1" style="float: right;">
+                                                                                        <a href="#" class="directEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                    </div>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <ul class="setting-list direct-replace-add list-unstyled m-t-20" style="display:none">
+                                                                                <li class="row">
+                                                                                    <form id="directAddForm">
+                                                                                        <div class="form-group">
+                                                                                            <div class="form-line center profile-pic">
+                                                                                                <img _ngcontent-hhc-c5="" alt="user" width="60" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                                <input id="directImageUpload" type="file" name="profile_photo1" placeholder="Photo" required="" capture="">
+                                                                                                <div class="edit1"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+
+                                                                                            </div>
+                                                                                            <div class="form-line">
+                                                                                                <label for="name" class="left">Name</label>
+                                                                                                <input type="text" name="name" class="form-control">
+                                                                                            </div>
+                                                                                            <div class="form-line">
+                                                                                                <label for="title" class="left">Title</label>
+                                                                                                <input type="text" name="title" class="form-control">
+                                                                                            </div>
+
+                                                                                            <div class="form-line center">
+                                                                                                <button class="btn-default1 btn canceladdDirect" value="Cancel">Cancel</button>
+                                                                                                <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </form>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row clearfix">
+                                    <!-- Basic Examples -->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="">
+                                            <div class="body">
+                                                <div class="row clearfix">
+                                                    <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                        <div class="panel-group" id="accordion_3" role="tablist" aria-multiselectable="true">
+                                                            <div class="panel">
+                                                                <div class="panel-heading profile_responsilities" role="tab" id="headingOne_3">
+                                                                    <h4 class="panel-title">
+                                                                        <a role="button" data-toggle="collapse" data-parent="#accordion_3" href="#collapseOne_3" aria-expanded="true" aria-controls="collapseOne_3">
+                                                                                My Responsibilities
+                                                                            </a>
+                                                                    </h4>
+                                                                </div>
+                                                                <div id="collapseOne_3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_3">
+                                                                    <div class="panel-body profile_edit">
+                                                                        <ul class="ml-menu profile_accordion">
+                                                                            <li>
+                                                                                <a href="#">My KPI's</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">My Initiatives</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">My Activities</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">My Tasks</a>
+                                                                            </li>
+                                                                            <li>
+                                                                                <a href="#">My Forms</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 6px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 482px;"></div>
+                                <div class="slimScrollRail" style="width: 6px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div> -->
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            <!-- #END# Right Sidebar -->
+            <!-- #END# FormEdit Sidebar -->
+            <!-- #END# KPI Desc Sidebar 364780743841-->
+
+            <aside id="initiative_sidebar" class="initiative_sidebar">
+                <div class="col-lg-6 col-md-6 sub_initiatives" id="sub_initiatives">
+                    <div class="card">
+                        <div class="header d-flex flex-row initiate_sidebar">
+                            <h5 class="prob d-flex flex-fill"><strong>Initiatives</strong> </h5>
+                            <div class="initativesdescription" data-toggle="modal" data-target=".initatives_description_popup"><i class="fa fa-plus-circle"></i></div>
+                        </div>
+                        <div class="d-flex flex-column" id="initiate_sidebar">
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_yellow">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development </p>
+                                    <div><strong>Department 1</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar width-per-40 rounded-pill bar_height yellow_bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">40%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_green">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 2</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar progress-bar-success width-per-80 rounded-pill bar_height" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">80%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_orange">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 3</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar width-per-15 rounded-pill bar_height orange_bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">15%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_green">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 4</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">15%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_green">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 5</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">15%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_green">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 6</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">15%</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-row sub_initiative_sidebar_details initiative_side_border_green">
+                                <div class="d-flex flex-column flex-fill profile_content">
+                                    <p>Increase the inﬂuence of customer's views in product development</p>
+                                    <div><strong>Department 7</strong></div>
+                                    <div class="d-flex flex-row">
+                                        <div class="progress-s progress">
+                                            <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                            </div>
+                                        </div>
+                                        <div class="progress_value">15%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+            
+            <!-- #Start Initatives Desc PopUp -->
+
+            <div class="modal fade initatives_description_popup" tabindex="-1" role="dialog"
+                aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h6 class="modal-title" id="myLargeModalLabel">Initative Description</h6>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="kpiForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="kpi_id">ID</label>
+                                    <input type="text" class="form-control browser-default" name="kpi_id" id="kpi_id" placeholder="">
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <label for="kpi_name">Name</label>
+                                    <input type="text" class="form-control browser-default" name="kpi_name" id="kpi_name" placeholder="">
+                                </div>
+                                <div class="form-group browser-default col-md-2">
+                                    <label for="impact">Impact</label>
+                                    <select id="impact" name="impact" class="form-control">
+                                        <option></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group mt--10">
+                                <label for="kpi_description">Description</label>
+                                <textarea class="form-control browser-default" name="kpi_description" id="kpi_description" placeholder="" cols="" rows="1"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Total">
+                                    <input type="text" class="form-control" placeholder="e.g 5000">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text" style="background: #fff;" id="">$</span>
+                                    </div>
+                                </div>
+                                <div class="input-group col-md-6">
+                                    <input type="text" class="form-control" placeholder="Utillized">
+                                    <input type="text" class="form-control" placeholder="e.g 2500">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text" style="background: #fff;" id="">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="input-group col-md-12">
+                                    <input type="text" class="form-control" placeholder="Balance">
+                                    <input type="text" class="form-control" placeholder="e.g 1000">
+                                    <div class="input-group-append">
+                                    <span class="input-group-text" style="background: #fff;" id="">$</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group browser-default col-md-6">
+                                    <label for="kpi_owner">Owner</label>
+                                    <select id="kpi_owner" name="kpi_owner" class="form-control">
+                                        <option>Choose</option>
+                                        <option value="">Option 1</option>
+                                        <option value="">Option 2</option>
+                                        <option value="">Option 3</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="kpi_start_end_date">Start/End Date</label>
+                                    <input type="text" class="form-control browser-default date_pickers" name="kpi_start_end_date" id="kpi_start_end_date">
+                                </div>
+                            </div>
+                            <div class="form-row mt-2">
+                                <label for="kpi_fields" class="ml-2 mr-3">Data Fields </label>
+                                <ul class="d-flex flex-row flex-wrap ml-2">
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Actual
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Target
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Budget
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Forecast
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="kpi_start_end_date">Status</label>
+                                    <select id="inputState" class="form-control browser-default">
+                                        <option>Choose</option>
+                                        <option value="manual">Manual</option>
+                                        <option value="weighted">Weighted</option>
+                                        <option value="first">First</option>
+                                        <option value="second">Second</option>
+                                        <option value="third">Third</option>
+                                        <option value="fourth">Fourth</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="kpi_name">Progress (%)</label>
+                                    <input type="number" min="0" class="form-control browser-default" name="kpi_name" id="kpi_name" placeholder="">
+                                </div>
+                                <div class="col-md-3">
+                                    <label for="initative_attachment">Attachment</label>
+                                    <input type="file" class="" id="">
+                                </div>
+                            </div>
+                            <div class="form-row mt-2">
+                                <label for="kpi_fields" class="ml-2 mr-3">Budget </label>
+                                <ul class="d-flex flex-row flex-wrap ml-2">
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Budget
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Spend 
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="form-check">
+                                            <div class="form-check">
+                                                <label class="form-check-label">
+                                                    <input class="form-check-input" type="checkbox" value="">
+                                                    Balance
+                                                    <span class="form-check-sign">
+                                                        <span class="check"></span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form-line right">
+                                <button type="button" class="btn-default1 btn" data-dismiss="modal" aria-label="Close">Cancel</button>
+                                <button class="btn-default btn-black" value="Save">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                    <hr>
+                    <div class="modal-footer">
+                        <div class="d-flex flex-column flex-fill ml-4 mb-5 text-left font-11">
+                            <div class="d-flex flex-row">
+                                <p class="kpi_audit">Audit</p>
+                            </div>
+                            <div class="d-flex flex-row">
+                                <div class="d-flex flex-column">
+                                    <p><span>Created By : </span><span>Arun</span></p>
+                                    <p><span>Created Date : </span><span>Oct 02, 2019</span></p>
+                                </div>
+                                <div class="d-flex flex-column pl-5">
+                                    <p><span>Modified By : </span><span>Karthik</span></p>
+                                    <p><span>Modified Date : </span><span>Oct 02, 2019</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            <!-- #END# Initatives Desc PopUp -->
+
+            <section class="content" id="section">
+                <!---------Initiatives--------->
+                <div class="initiative_details">
+                    <div class="container-fluid p-0 m-t--75 text-dark bg-white">
+                        <div class="d-flex flex-row flex-fill">
+                            <div class="img_details">
+                                <img src="../../assets/images/user/user7.jpg" alt="User" class="rounded-circle" width="70">
+                            </div>
+                            <div class="flex-fill initiative_title">
+                                <h6>Increase the inﬂuence of customer's views in product development</h6>
+                            </div>
+                            <div class="title_edit">
+                                <i class="fas fa-pencil-alt title_edit_icon" data-toggle="modal" data-target=".initatives_description_popup"></i>
+                                <i class="fa fa-ellipsis-h title_edit_icon"></i>
+                            </div>
+                        </div>
+                        <div class="d-flex flex-row mt--15 flex-wrap">
+                            <div class="d-flex flex-column description">
+                                <p>Department</p>
+                                <p class="font-weight-bold editableTxt"><b>Human Resources</b></p>
+                                <p>Status</p>
+                                <div class="good font-weight-bold">Good</div>
+                            </div>
+                            <div class="d-flex flex-column flex-fill progress_bar">
+                                <p>Progress</p>
+                                <div class="d-flex flex-row">
+                                    <div class="progress-s progress">
+                                        <div class="progress-bar progress-bar-success width-per-80 rounded-pill green_bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                        </div>
+                                    </div>
+                                    <div class="progress_value font-weight-bold">80%</div>
+                                </div>
+                                <div class="d-flex flex-row align-items-end">
+                                    <div class="d-flex flex-column progress_bar align-self-start">
+                                        <p>Reaction</p>
+                                        <div class="d-flex reaction">
+                                            <i class="fas fa-thumbs-down reaction_icon dislike"></i>
+                                            <i class="fas fa-thumbs-up reaction_icon like"></i>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <p>Amount</p>
+                                        <div class="amount">
+                                            <div>$ 50,000</div>
+                                            <div>Total</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div class="amount">
+                                            <div>$ 70,000</div>
+                                            <div>Utillized</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <div class="amount">
+                                            <div>$ 20,000</div>
+                                            <div>Balance</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column pr-4">
+                                <p>Impact</p>
+                                <div>
+                                    <form action="">
+                                        <select name="" id="">
+                                            <option value=""></option>
+                                        </select>
+                                    </form>
+                                </div>
+                                <p>Remaining</p>
+                                <p class="diff">0 Days</p>
+                            </div>
+                            <div class="d-flex flex-column initiative_id_details">
+                                <p>Initiative ID:</p>
+                                <p class="font-weight-bold">001</p>
+                                <p>Start / End</p>
+                                <p>Oct 09, 2019 - Oct 11, 2019</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-------Sub Initiatives------->
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 sub_initiatives">
+                        <div class="card">
+                            <div class="header d-flex flex-row">
+                                <h5 class="prob d-flex flex-fill"><strong>Sub Initiatives</strong> </h5>
+                                <div class="flex-fill create_initives add-sub-initiative"><i class="fa fa-plus"></i>Sub Initiatives</div>
+                                <ul class="header-dropdown m-r--2">
+                                    <li class="dropdown m-t--10">
+                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                            <li>
+                                                <a href="#" onclick="return false;">Add</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column sub-ini-box">
+                                <!-- Dummy Row for cloning -->
+                                <div class="d-flex flex-row sub_initiative_details" id="sub-ini-row" style="display:none !important">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Please Click & Edit Sub Initiative Description Here</p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-0 rounded-pill bar_height green_bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Sub Initiatives 1 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-40 rounded-pill bar_height yellow_bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Sub Initiatives 2 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar progress-bar-success width-per-80 rounded-pill bar_height" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">80%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Sub Initiatives 3 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-15 rounded-pill bar_height orange_bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">15%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Sub Initiatives 4 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">15%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!---------Chart-------->
+                    <div class="col-lg-6 col-md-6 sub_initiatives">
+                        <div class="card">
+                            <div class="header">
+                                <h5 class="prob"><strong>Chart</strong> </h5>
+                                <ul class="header-dropdown m-r--2">
+                                    <li class="dropdown m-t--10">
+                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                            <li>
+                                                <a href="#" onclick="return false;">Add</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div id="chartdiv"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Activities-->
+                    <div class="col-lg-6 col-md-6 sub_initiatives">
+                        <div class="card">
+                            <div class="header d-flex flex-row">
+                                <h5 class="prob d-flex flex-fill"><strong>Activities</strong> </h5>
+                                <div class="flex-fill create_initives add-activities"><i class="fa fa-plus"></i> Activities</div>
+                                <ul class="header-dropdown m-r--2 d-flex">
+                                    <li class="dropdown m-t--10">
+                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                            <li>
+                                                <a href="#" onclick="return false;">Add</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column activities-box">
+
+                                <!-- Activities Dummy Row -->
+                                <div class="d-flex flex-row sub_initiative_details" id="activities-row" style="display:none !important">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Activties 1 - Lorem ipsum dolor sit amet, nam ea, ei putent oblique probatus vel</p>
+                                        <div class="d-flex flex-row">
+                                            <div class="icon">
+                                                <div id="one" class="chart_orange chart-pie"></div>
+                                            </div>
+                                            <div class="pie-progress">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                        <option value="">Select</option>
+                                                        <option value=""></option>
+                                                    </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Activties 1 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="icon">
+                                                <div id="one" class="chart_orange chart-pie"></div>
+                                            </div>
+                                            <div class="pie-progress">25%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Activties 2 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="icon">
+                                                <div id="two" class="chart_green chart-pie"></div>
+                                            </div>
+                                            <div class="pie-progress">85%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Activties 3 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="icon">
+                                                <div id="three" class="chart_yellow chart-pie"></div>
+                                            </div>
+                                            <div class="pie-progress">50%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Activties 4 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="icon">
+                                                <div id="four" class="chart_orange chart-pie"></div>
+                                            </div>
+                                            <div class="pie-progress">25%</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column">
+                                        <input type="text" class="datePicker" name="datepicker" readonly style="font-size:11px" />
+                                        <div>
+                                            <form action="">
+                                                <select name="" id="">
+                                                    <option value="">Select</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-6 sub_initiatives">
+                        <div class="card">
+                            <div class="header d-flex flex-row">
+                                <h5 class="prob d-flex flex-fill"><strong>Comments</strong> </h5>
+                            </div>
+                            <div class="comment-history" id="comment-conversation_1">
+                                <ul id="comment-conversation">
+                                    <li>
+                                        <div class="d-flex flex-row">
+                                            <div class="flex-column comment_image">
+                                                <img src="../../images/user/usrbig6.jpg" class="rounded-circle" alt="User" width="40">
+                                            </div>
+                                            <div class="flex-column comment_details">
+                                                <ul>
+                                                    <li>
+                                                        <span class="message-data-name"><strong>Elmer Roberts, </strong></span>
+                                                        <span class="message-data-time">10:12 AM, Today</span>
+                                                    </li>
+                                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</li>
+                                                    <li>
+                                                        <ul class="d-flex flex-row">
+                                                            <li>Reply</li>
+                                                            <li>Like</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex-column">
+                                                <ul class="header-dropdown m-r--2 pt-2 d-flex">
+                                                    <li class="dropdown">
+                                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                            <i class="material-icons">more_vert</i>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Edit</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row">
+                                            <div class="flex-column comment_image">
+                                                <img src="../../images/user/usrbig6.jpg" class="rounded-circle" alt="User" width="40">
+                                            </div>
+                                            <div class="flex-column comment_details">
+                                                <ul>
+                                                    <li>
+                                                        <span class="message-data-name"><strong>Elmer Roberts, </strong></span>
+                                                        <span class="message-data-time">10:12 AM, Today</span>
+                                                    </li>
+                                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</li>
+                                                    <li>
+                                                        <ul class="d-flex flex-row">
+                                                            <li>Reply</li>
+                                                            <li>Like</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex-column">
+                                                <ul class="header-dropdown m-r--2 pt-2 d-flex">
+                                                    <li class="dropdown">
+                                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                            <i class="material-icons">more_vert</i>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Edit</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row">
+                                            <div class="flex-column comment_image">
+                                                <img src="../../images/user/usrbig6.jpg" class="rounded-circle" alt="User" width="40">
+                                            </div>
+                                            <div class="flex-column comment_details">
+                                                <ul>
+                                                    <li>
+                                                        <span class="message-data-name"><strong>Elmer Roberts, </strong></span>
+                                                        <span class="message-data-time">10:12 AM, Today</span>
+                                                    </li>
+                                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</li>
+                                                    <li>
+                                                        <ul class="d-flex flex-row">
+                                                            <li>Reply</li>
+                                                            <li>Like</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex-column">
+                                                <ul class="header-dropdown m-r--2 pt-2 d-flex">
+                                                    <li class="dropdown">
+                                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                            <i class="material-icons">more_vert</i>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Edit</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="d-flex flex-row">
+                                            <div class="flex-column comment_image">
+                                                <img src="../../images/user/usrbig6.jpg" class="rounded-circle" alt="User" width="40">
+                                            </div>
+                                            <div class="flex-column comment_details">
+                                                <ul>
+                                                    <li>
+                                                        <span class="message-data-name"><strong>Elmer Roberts, </strong></span>
+                                                        <span class="message-data-time">10:12 AM, Today</span>
+                                                    </li>
+                                                    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa</li>
+                                                    <li>
+                                                        <ul class="d-flex flex-row">
+                                                            <li>Reply</li>
+                                                            <li>Like</li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="flex-column">
+                                                <ul class="header-dropdown m-r--2 pt-2 d-flex">
+                                                    <li class="dropdown">
+                                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                            <i class="material-icons">more_vert</i>
+                                                        </a>
+                                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Edit</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="#" onclick="return false;">Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="comment_send">
+                                <div class="form-group d-flex flex-row align-items-center">
+                                    <div class="form-line">
+                                        <input type="text" class="form-control" placeholder="Type a comment..." />
+                                    </div>
+                                    <div class="send_btn">
+                                        <i class="fas fa-arrow-right"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!---------MileStones-------->
+                    <div class="col-lg-6 col-md-6 sub_initiatives">
+                        <div class="card">
+                            <div class="header d-flex flex-row">
+                                <h5 class="prob d-flex flex-fill"><strong>Milestones</strong> </h5>
+                                <div class="flex-fill create_initives add-milestones"><i class="fa fa-plus"></i> Milestone</div>
+                                <ul class="header-dropdown m-r--2 d-flex">
+                                    <li class="dropdown m-t--10">
+                                        <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                            <i class="material-icons">more_vert</i>
+                                        </a>
+                                        <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                            <li>
+                                                <a href="#" onclick="return false;">Add</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;">Edit</a>
+                                            </li>
+                                            <li>
+                                                <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="d-flex flex-column milestones-box">
+
+                                <!-- Milestone Dummy Row -->
+                                <div class="d-flex flex-row sub_initiative_details" id="milestones-row" style="display:none !important">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Milestones </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-0 rounded-pill bar_height green_bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">0%</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Milestones 1 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-40 rounded-pill bar_height yellow_bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">40%</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Milestones 2 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar progress-bar-success width-per-80 rounded-pill bar_height" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">80%</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Milestones 3 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar width-per-15 rounded-pill bar_height orange_bar" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">15%</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-row sub_initiative_details">
+                                    <div class="d-flex flex-column flex-fill profile_content">
+                                        <p class="editableTxt">Milestones 4 </p>
+                                        <div class="d-flex flex-row">
+                                            <div class="progress-s progress">
+                                                <div class="progress-bar progress-bar-success width-per-15 rounded-pill bar_height" role="progressbar" aria-valuenow="15" aria-valuemin="0" aria-valuemax="100">
+                                                </div>
+                                            </div>
+                                            <div class="progress_value">15%</div>
+                                        </div>
+                                    </div>
+                                    <div class="flex-column">
+                                        <ul class="header-dropdown m-r--2 d-flex">
+                                            <li class="dropdown">
+                                                <a href="#" onclick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
+                                                    <i class="material-icons">more_vert</i>
+                                                </a>
+                                                <ul class="dropdown-menu pull-right" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 24px, 0px);">
+                                                    <li>
+                                                        <a href="#" onclick="return false;">Edit</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#" onclick="return false;" class="delete-row">Delete</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </section>
+            </div>
+            <!-- Plugins Js -->
+            <script src="../../assets/js/app.min.js"></script>
+            <script src="../../assets/js/widgets.js"></script>
+            <!-- Custom Js -->
+            <script src="../../assets/js/admin.js"></script>
+            <script src="../../assets/js/bundles/amcharts4/core.js"></script>
+            <script src="../../assets/js/bundles/amcharts4/charts.js"></script>
+            <script src="../../assets/js/bundles/amcharts4/animated.js"></script>
+            <script src="../../assets/js/pages/dashboard/dashboard3.js"></script>
+            <!-- Knob Js -->
+            <script src="../../assets/js/pages/todo/todo.js"></script>
+            <script src="../../assets/js/bundles/datamaps/d3.min.js"></script>
+            <script src="../../assets/js/bundles/datamaps/topojson.min.js"></script>
+            <script src="../../assets/js/bundles/datamaps/datamaps.world.min.js"></script>
+            <script src="../../assets/js/pages/maps/datamap.js"></script>
+            <script src="../../assets/jquery-ui.min.js"></script>
+            <script src="../../assets/moment.js"></script>
+            <script src="../../assets/daterangepicker.min.js"></script>
+            <script src="../../assets/js/pages/core.js"></script>
+            <script src="../../assets/js/pages/charts.js"></script>
+            <script src="../../assets/js/pages/widgets/chart-widget.js"></script>
+            <script src="../../assets/js/pages/spiritedaway.js"></script>
+            <script src="../../assets/js/pages/animated.js"></script>
+            <script src="../../assets/js/widgets.js"></script>
+            <script>
+                $(document).on("click", ".editableTxt, .progress_value, .pie-progress", function() {
+                    this.contentEditable = "true";
+                });
+
+                $('.datePicker').daterangepicker({
+                    timePicker: false,
+                    autoApply: true,
+                    startDate: moment().startOf('hour'),
+                    endDate: moment().startOf('hour').add(48, 'hour'),
+                    locale: {
+                        format: 'MMM DD, YYYY'
+                    }
+
+                }).on('apply.daterangepicker', function(e, picker) {
+                    var startDate = new Date();
+                    var endDate = picker.endDate._d;
+                    var oneDay = 24 * 60 * 60 * 1000;
+                    var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / (oneDay)));
+                    $('.diff').html(diffDays + ' Days');
+                });
+
+                $(document).on("blur change", ".progress_value", function() {
+                    var str = $(this).html();
+                    var res = str.split("%");
+                    var classes = $(this).parent().children(':first-child').children(':first-child').attr('class').split(' ');
+                    var newcl = [];
+                    for (var i = 0; i < classes.length; i++) {
+                        r = classes[i].search(/width-per-+/);
+                        if (r) newcl[newcl.length] = classes[i];
+                    }
+                    $(this).parent().children(':first-child').children(':first-child').removeClass().addClass(newcl.join(" ")).addClass('width-per-' + res[0]);
+                });
+
+                $(document).on("blur change", ".pie-progress", function() {
+                    var str = $(this).html();
+                    var res = str.split("%");
+                    var classes = $(this).parent().children(':first-child').children(':first-child').attr('class').split(' ');
+                    var id = $(this).parent().children(':first-child').children(':first-child').attr('id');
+                    var minus = +100 - +res[0];
+                    var colors = classes[0].split('_');
+                    setTimeout(function() {
+                        updateChart(id, res[0].trim(), minus, colors[1]);
+                    }, 200);
+
+
+                });
+
+                //Gantt Chart
+                am4core.ready(function() {
+
+                    // Themes begin
+                    am4core.useTheme(am4themes_animated);
+                    // Themes end
+
+                    var chart = am4core.create("chartdiv", am4charts.XYChart);
+                    chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
+
+                    chart.paddingRight = 30;
+                    chart.dateFormatter.inputDateFormat = "yyyy-MM-dd HH:mm";
+
+                    var colorSet = new am4core.ColorSet();
+                    colorSet.saturation = 0.4;
+
+                    chart.data = [{
+                        "category": "Project 01",
+                        "start": "2019-03-01",
+                        "end": "2019-06-14",
+                        "color": colorSet.getIndex(0).brighten(0),
+                    }, {
+                        "category": "Project 02",
+                        "start": "2019-04-08",
+                        "end": "2019-07-10",
+                        "color": colorSet.getIndex(2).brighten(0),
+                    }, {
+                        "category": "Project 03",
+                        "start": "2019-05-02",
+                        "end": "2019-07-08",
+                        "color": colorSet.getIndex(4).brighten(0),
+                    }, {
+                        "category": "Project 04",
+                        "start": "2019-03-01",
+                        "end": "2019-07-19",
+                        "color": colorSet.getIndex(6).brighten(0),
+                    }, {
+                        "category": "Project 05",
+                        "start": "2019-01-01",
+                        "end": "2019-01-20",
+                        "color": colorSet.getIndex(8).brighten(0),
+                    }];
+
+                    chart.dateFormatter.dateFormat = "yyyy-MM-dd";
+                    chart.dateFormatter.inputDateFormat = "yyyy-MM-dd";
+
+                    var categoryAxis = chart.yAxes.push(new am4charts.CategoryAxis());
+                    categoryAxis.dataFields.category = "category";
+                    categoryAxis.renderer.grid.template.location = 0;
+                    categoryAxis.renderer.inversed = true;
+
+                    var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+                    dateAxis.renderer.minGridDistance = 50;
+                    dateAxis.baseInterval = {
+                        count: 1,
+                        timeUnit: "day"
+                    };
+
+                    dateAxis.renderer.tooltipLocation = 0;
+
+                    var series1 = chart.series.push(new am4charts.ColumnSeries());
+                    series1.columns.template.height = am4core.percent(20);
+                    series1.columns.template.tooltipText = "{category}";
+
+                    series1.dataFields.openDateX = "start";
+                    series1.dataFields.dateX = "end";
+                    series1.dataFields.categoryY = "category";
+                    series1.columns.template.propertyFields.fill = "color"; // get color from data
+                    series1.columns.template.propertyFields.stroke = "color";
+                    series1.columns.template.strokeOpacity = 1;
+
+                    // chart.scrollbarX = new am4core.Scrollbar();
+
+                    let cellSize = 55;
+                    chart.events.on("datavalidated", function(ev) {
+                        // Get objects of interest
+                        let chart = ev.target;
+                        let categoryAxis = chart.yAxes.getIndex(0);
+
+                        // Calculate how we need to adjust chart height
+                        let adjustHeight = chart.data.length * cellSize - categoryAxis.pixelHeight;
+
+                        // get current chart height
+                        let targetHeight = chart.pixelHeight + adjustHeight;
+
+                        // Set it on chart's container
+                        chart.svgContainer.htmlElement.style.height = targetHeight + "px";
+                    });
+
+                }); // end am4core.ready()
+
+                $('g[stroke="#3cabff"]').parent().css('display', 'none');
+
+                //clone sub initiatives row
+                $(document).on("click", ".add-sub-initiative", function() {
+                    var cloned = $('#sub-ini-row').clone().show();
+                    $('.sub-ini-box').prepend(cloned);
+                    $('.datePicker').daterangepicker({
+                        timePicker: false,
+                        autoApply: true,
+                        startDate: moment().startOf('hour'),
+                        endDate: moment().startOf('hour').add(48, 'hour'),
+                        locale: {
+                            format: 'MMM DD, YYYY'
+                        }
+
+                    }).on('apply.daterangepicker', function(e, picker) {
+                        var startDate = new Date();
+                        var endDate = picker.endDate._d;
+                        var oneDay = 24 * 60 * 60 * 1000;
+                        var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / (oneDay)));
+                        $('.diff').html(diffDays + ' Days');
+                    });
+                });
+
+                //clone activities row
+                $(document).on("click", ".add-activities", function() {
+                    var cloned = $('#activities-row').clone().show();
+                    $('.activities-box').prepend(cloned);
+                    $('.datePicker').daterangepicker({
+                        timePicker: false,
+                        autoApply: true,
+                        startDate: moment().startOf('hour'),
+                        endDate: moment().startOf('hour').add(48, 'hour'),
+                        locale: {
+                            format: 'MMM DD, YYYY'
+                        }
+
+                    }).on('apply.daterangepicker', function(e, picker) {
+                        var startDate = new Date();
+                        var endDate = picker.endDate._d;
+                        var oneDay = 24 * 60 * 60 * 1000;
+                        var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / (oneDay)));
+                        $('.diff').html(diffDays + ' Days');
+                    });
+                });
+
+                //clone activities row
+                $(document).on("click", ".add-milestones", function() {
+                    var cloned = $('#milestones-row').clone().show();
+                    $('.milestones-box').prepend(cloned);
+                    $('.datePicker').daterangepicker({
+                        timePicker: false,
+                        autoApply: true,
+                        startDate: moment().startOf('hour'),
+                        endDate: moment().startOf('hour').add(48, 'hour'),
+                        locale: {
+                            format: 'MMM DD, YYYY'
+                        }
+
+                    }).on('apply.daterangepicker', function(e, picker) {
+                        var startDate = new Date();
+                        var endDate = picker.endDate._d;
+                        var oneDay = 24 * 60 * 60 * 1000;
+                        var diffDays = Math.round(Math.abs((startDate.getTime() - endDate.getTime()) / (oneDay)));
+                        $('.diff').html(diffDays + ' Days');
+                    });
+                });
+
+                $(document).on("click", ".delete-row", function() {
+                    $(this).parent().parent().parent().parent().parent().parent().css('display', 'none !important');
+                });
+
+
+                function readURL(input) {
+                    if (input.files && input.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $('#imagePreview').css('background-image', 'url(' + e.target.result + ')');
+                            $('#imagePreview').hide();
+                            $('#imagePreview').fadeIn(650);
+                        }
+                        reader.readAsDataURL(input.files[0]);
+                    }
+                }
+                $(".imageUpload").change(function() {
+                    readURL(this);
+                });
+
+                $('.switchTable').on('click', function() {
+                    $('.tableview').css('display', 'block');
+                    $('.tableview').css('display', '');
+                    $('.tileview').css('display', 'none');
+                    $('.switchTable').css('display', 'none');
+                    $('.switchTile').css('display', 'block');
+                });
+
+
+                $('.switchTile').on('click', function() {
+                    $('.tileview').css('display', 'block');
+                    $('.tileview').css('display', '');
+                    $('.tableview').css('display', 'none');
+                    $('.switchTile').css('display', 'none');
+                    $('.switchTable').css('display', 'block');
+                });
+            </script>
+    </body>

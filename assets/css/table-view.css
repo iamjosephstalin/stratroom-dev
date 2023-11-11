@@ -1,0 +1,115 @@
+select {
+    display: block !important;
+    height: 2rem !important;
+}
+
+.fa-arrow-up {
+    color: #1aa243 !important;
+}
+
+.fa-arrow-down {
+    color: red !important;
+}
+
+.fa-arrow-right {
+    color: #ffd500 !important;
+}
+
+.green {
+    color: #1aa243 !important;
+    background-color: transparent !important;
+}
+
+.red {
+    color: #e84343 !important;
+    background-color: transparent !important;
+}
+
+.yellow {
+    color: #ffd500 !important;
+    background-color: transparent !important;
+}
+
+.table thead tr th,
+.table tbody tr td {
+    font-size: 11px !important;
+    vertical-align: middle;
+}
+
+strong {
+    font-weight: 600 !important;
+}
+
+.input_field_kpi {
+    height: 1rem !important;
+    font-size: 13px !important;
+}
+
+.input_field_obt {
+    height: 1rem !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+}
+
+.card {
+    margin: 1.0rem -12px 1rem -10px !important;
+}
+
+.flex-row .flex-column .color_pickers_1{
+    border: 1px solid #e9ecef;
+    height: 15px;
+    margin-bottom: 0px;
+    width: 105px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.flex-row .flex-column .color_pickers_2{
+    border: 1px solid #e9ecef;
+    height: 15px;
+    margin-bottom: 0px;
+    width: 65px;
+    font-size: 11px;
+    text-align: center;
+}
+
+.flex-row .flex-column .color_pickers_3{
+    border: 1px solid #e9ecef;
+    height: 15px;
+    margin-bottom: 0px;
+    width: 33px;
+    font-size: 9px;
+    text-align: center;
+}
+.modal .modal-header .modal-title {
+    font-weight: bold;
+    font-size: 12px !important;
+}
+label{ font-size: 12px; }
+
+.form-control::-webkit-input-placeholder { /* Edge */
+    padding-left: 14px;
+    font-size: 12px !important;
+}
+
+.form-control:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    padding-left: 14px;
+    font-size: 12px !important;
+}
+
+.form-control::placeholder {
+    padding-left: 14px;
+    font-size: 12px !important;
+}
+button{ font-size: 12px; }
+
+a.nav-link{
+    font-size: 14px !important;
+}
+
+.daterangepicker {
+    top: 60px !important;
+    right: 80px !important;
+    left: auto !important;
+    z-index: 99999;
+}

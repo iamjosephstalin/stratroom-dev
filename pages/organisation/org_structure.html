@@ -1,0 +1,949 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>StratRoom</title>
+    <!-- Favicon-->
+    <!-- <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon"> -->
+    <!-- Plugins Core Css -->
+    <link href="../../assets/css/app.min.css" rel="stylesheet">
+    <!-- Custom Css -->
+    <link href="../../assets/css/style.css" rel="stylesheet" />
+    <link href="../../assets/css/startroom/wedgets.css" rel="stylesheet" />
+    <!-- You can choose a theme from css/styles instead of get all themes -->
+    <link href="../../assets/css/styles/all-themes.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../assets/css/jquery.treegrid.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap-treefy.css">
+    <!-- <link rel="stylesheet" href="../../assets/jquery.comiseo.daterangepicker.css"> -->
+    <link href="../../assets/jquery-ui.min.css" rel="stylesheet">
+    <link href="../../assets/daterangepicker/daterangepicker.min.css" rel="stylesheet">
+
+    <style>
+        html,
+        body {
+            font-family: poppins;
+        }
+        
+        #tree {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .field_0 {
+            fill: #313131 !important;
+        }
+        
+        line {
+            stroke: #313131 !important;
+        }
+        
+        .edit-photo {
+            background-color: #313131 !important;
+        }
+        
+        .bg {
+            fill: lightgray;
+        }
+        
+        .fill {
+            fill: green;
+        }
+        
+        .field_0 {
+            font-weight: bold !important;
+        }
+        
+        hr {
+            margin: 0 !important;
+        }
+        
+        .daterangepicker {
+            top: 60px !important;
+            right: 0 !important;
+            left: auto !important;
+        }
+    </style>
+</head>
+
+
+<body class="light">
+
+    <!-- Page Loader -->
+    <div class="page-loader-wrapper">
+        <div class="loader">
+            <div class="m-t-30">
+                <img class="loading-img-spin" src="../../assets/images/loading.png" alt="admin">
+            </div>
+            <p>Please wait...</p>
+        </div>
+    </div>
+    <!-- <div>
+        <img src="../../assets/images/.png" alt="">
+    </div> -->
+    <!-- #END# Page Loader -->
+    <!-- Overlay For Sidebars -->
+    <div class="overlay"></div>
+    <!-- #END# Overlay For Sidebars -->
+    <!-- Top Bar -->
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a href="#" onClick="return false;" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
+                <a href="#" onClick="return false;" class="bars"></a>
+                <a href="#" onClick="return false;" class="bar_nav sidemenu-collapse"><i class="nav-hdr-btn ti-menu" style="color: #000"></i></a>
+                <a class="navbar-brand nav_float" href="#">
+                    <span class="logo-name">StratRoom</span>
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="fullscreen" style="padding: 4px;left: -14px;">
+                        <ul class="list-unstyled order-list">
+                            <li class="avatar avatar-sm">
+                                <img class="rounded-circle" src="../../assets/images/user/user7.jpg" alt="user">
+                            </li>
+                            <li class="avatar avatar-sm">
+                                <img class="rounded-circle" src="../../assets/images/user/user8.jpg" alt="user">
+                            </li>
+                            <li class="avatar avatar-sm">
+                                <img class="rounded-circle" src="../../assets/images/user/user9.jpg" alt="user">
+                            </li>
+                            <li class="avatar avatar-sm">
+                                <img class="rounded-circle" src="../../assets/images/user/user9.jpg" alt="user">
+                            </li>
+                            <li _ngcontent-hhc-c5="" class="avatar avatar-sm"><span _ngcontent-hhc-c5="" class="badge">+3</span></li>
+                        </ul>
+                    </li>
+                    <li class="fullscreen">
+                        <form class="form-header" action="" method="POST">
+                            <input class="au-input au-input--xl" style="min-width: 20%" type="text" name="search" placeholder="Search">
+                            <button class="au-btn--submit" type="submit">
+                        <i class="fa fa-search" style="color:gray"></i>
+                        </button>
+                        </form>
+                    </li>
+                    <li class="fullscreen">
+                        <!-- <a href="" class=""> -->
+                        <!-- <i class="nav-hdr-btn ti-calendar" style="color: gray"></i> -->
+                        <!-- <input id="e4" name="e4"> -->
+                        <input class="daterangepicker-field top_datepicker"></input>
+
+                        <!-- </a> -->
+                    </li>
+                    <!-- #END# Full Screen Button -->
+                    <!-- #START# Notifications-->
+                    <li class="dropdown">
+                        <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="nav-hdr-btn ti-bell" style="color: gray"></i>
+                            <span class="notify"></span>
+                            <span class="heartbeat"></span>
+                        </a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" onClick="return false;" class="dropdown-toggle" data-toggle="dropdown" role="button">
+                            <i class="nav-hdr-btn ti-settings" style="color: gray"></i>
+                            <span class="notify"></span>
+                            <span class="heartbeat"></span>
+                        </a>
+                    </li>
+                    <!-- #END# Notifications-->
+                    <li class="">
+                        <a href="#" onclick="return false;" class=" dropdown-toggle js-right-sidebar" data-close="true">
+                            <!-- <img src="../../assets/images/user.jpg" alt="user"> -->
+                            <i class="fas fa-user-circle"></i> </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- #Top Bar -->
+    <div>
+        <!-- Left Sidebar -->
+        <aside id="leftsidebar" class="sidebar">
+            <!-- Menu -->
+            <div class="menu">
+                <ul class="list">
+                    <li class="active">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-home"></i>
+                            <span>Organisation Structure</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="menu-icon ti-image"></i>
+                            <span>Dashboards</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="#">BSC Dashboard</a>
+                            </li>
+                            <li>
+                                <a href="#">Strategy Map</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-bar-chart"></i>
+                            <span>Charts</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-key"></i>
+                            <span>Users & Access</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-vector"></i>
+                            <span>Workflows</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-bell"></i>
+                            <span>Notifications & Alerts</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-server"></i>
+                            <span>Data Management</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#" onClick="return false;" class="menu-toggle">
+                            <i class="menu-icon ti-layout-media-right-alt"></i>
+                            <span>Template Management</span>
+                        </a>
+                        <ul class="ml-menu">
+                            <li>
+                                <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                        Scorecard Layout Options
+                                    </a>
+                                <ul class="ml-menu">
+                                    <li><a href="#">Standard BSC View</a></li>
+                                    <li><a href="#">Dashboard View</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                    Initiative
+                                    </a>
+                                <ul class="ml-menu">
+                                    <li><a href="#">Sub Initiatives</a></li>
+                                    <li><a href="#">Tasks</a></li>
+                                    <li><a href="#">Activities</a></li>
+                                    <li><a href="#">Milestones</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Reports Table</a>
+                            </li>
+                            <li>
+                                <a href="#" id="sub-menu" onClick="return false;" class="menu-toggle">
+                                    Comments
+                                    </a>
+                                <ul class="ml-menu">
+                                    <li><a href="#">Comments & Observations</a></li>
+                                    <li><a href="#">Proof of Evidence</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Employee Layout</a>
+                            </li>
+                            <li>
+                                <a href="#">Appraisal</a>
+                            </li>
+                            <li>
+                                <a href="#">Data Collection Form</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-home"></i>
+                            <span>Widget Management</span>
+                        </a>
+                    </li>
+
+                    <li class="">
+                        <a href="#" onClick="return false;" class="">
+                            <i class="menu-icon ti-pie-chart"></i>
+                            <span>Reports</span>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- #Menu -->
+        </aside>
+        <!-- #END# Left Sidebar -->
+        <!-- Right Sidebar -->
+        <aside id="rightsidebar" class="right-sidebar open">
+            <div class="tab-content">
+                <div role="tabpanel" class="tab-pane in active in active stretchLeft" id="skins">
+                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+                        <div class="demo-skin" style="overflow: hidden; width: auto; height: auto;">
+                            <div class="rightSetting">
+                                <p class="left">Profile</p>
+                                <a href="#">
+                                    <p class="right editProfile">Edit</p>
+                                    <p class="right editProfile"></p>
+                                </a>
+                                <ul class="setting-list profile-default list-unstyled m-t-20 center">
+                                    <!-- <li class="center">
+                                            <i class="fas fa-user-circle" style="font-size: 110px"></i>
+                                        </li> -->
+                                    <li _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px">
+                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                    </li>
+                                    <li>
+                                        <p class="center name">Karthick, C001</p>
+                                    </li>
+                                    <li>
+                                        <p class="center grey1">Manager, Chennai, TN, India</p>
+                                    </li>
+                                    <li>
+                                        <p class="center grey1">karthick@stratroom.com</p>
+                                    </li>
+                                </ul>
+                                <ul class="setting-list profile-replace list-unstyled m-t-20" style="display: none">
+                                    <li class="center">
+                                        <form id="profileForm">
+                                            <div class="form-group">
+                                                <div class="form-line profile-pic">
+                                                    <!-- <i  class="fas fa-user-circle" style="font-size: 100px; opacity:0.5"></i> -->
+                                                    <li id="profileImage" _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px; z-index:-1">
+                                                        <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                    </li>
+                                                    <input id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture="">
+                                                    <div class="edit"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+                                                </div>
+                                                <div class="form-line">
+                                                    <label for="name" class="left">Name</label>
+                                                    <input type="text" name="name" class="form-control">
+                                                </div>
+                                                <div class="form-line">
+                                                    <label for="id" class="left">Employee ID</label>
+                                                    <input type="text" name="id" class="form-control">
+                                                </div>
+
+                                                <div class="form-line">
+                                                    <label for="title" class="left">Title</label>
+                                                    <input type="text" name="title" class="form-control">
+                                                </div>
+
+                                                <div class="form-line">
+                                                    <label for="email" class="left">Email</label>
+                                                    <input type="email" name="email" class="form-control">
+                                                </div>
+
+                                                <div class="form-line">
+                                                    <label for="location" class="left">Location</label>
+                                                    <input type="text" name="location" class="form-control">
+                                                </div>
+
+                                                <div class="form-line center">
+                                                    <button class="btn-default1 btn cancelEditProfile" value="Cancel">Cancel</button>
+                                                    <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                </div>
+
+                                            </div>
+                                        </form>
+                                    </li>
+                                    <li>
+                                        <!-- <p class="center name">Karthick</p> -->
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="row clearfix">
+                                <!-- Basic Examples -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="">
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                    <div class="panel-group" id="accordion_1" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel">
+                                                            <div class="panel-heading profile_report" role="tab" id="headingOne_1">
+                                                                <h4 class="panel-title">
+                                                                    <a role="button" data-toggle="collapse" data-parent="#accordion_1" href="#collapseOne_1" aria-expanded="true" aria-controls="collapseOne_1">
+                                                                            Reporting To
+                                                                        </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseOne_1" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_1">
+                                                                <div class="panel-body profile_edit">
+                                                                    <div class="rightSetting">
+                                                                        <!-- <p class="left">Reporting To</p> -->
+                                                                        <a href="#" id="reportingAdd">
+                                                                            <p class="right">Add</p>
+                                                                        </a>
+                                                                        <ul class="setting-list reporting-default list-unstyled m-t-20">
+                                                                            <li class="row reportingRow">
+                                                                                <div class="col-md-3 p-b-10">
+                                                                                    <!-- <li id="profileImage" _ngcontent-hhc-c5="" class="center avatar avatar-sm" style="width:85px; z-index:-1"> -->
+                                                                                    <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                    <!-- </li> -->
+                                                                                </div>
+                                                                                <div class="col-md-7 p-t-5">
+                                                                                    <p class="center name">Arun</p>
+                                                                                    <p class="center grey1">Developer</p>
+
+                                                                                </div>
+                                                                                <div class="col-md-1" style="float: right;">
+                                                                                    <a href="#" class="reportingEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="row reportingRow">
+                                                                                <div class="col-md-3 p-b-10">
+                                                                                    <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig8.jpg">
+                                                                                </div>
+                                                                                <div class="col-md-7 p-t-5">
+                                                                                    <p class="center name">Santhosh</p>
+                                                                                    <p class="center grey1">CTO</p>
+                                                                                </div>
+                                                                                <div class="col-md-1" style="float: right;">
+                                                                                    <a href="#" class="reportingEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <ul class="setting-list reporting-replace-add list-unstyled m-t-20" style="display:none">
+                                                                            <li class="row">
+                                                                                <form id="reportingAddForm">
+                                                                                    <div class="form-group">
+                                                                                        <div class="form-line center profile-pic">
+                                                                                            <img _ngcontent-hhc-c5="" alt="user" width="60" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                            <input id="reportingImageUpload" type="file" name="profile_photo1" placeholder="Photo" required="" capture="">
+                                                                                            <div class="edit1"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+                                                                                        </div>
+                                                                                        <div class="form-line">
+                                                                                            <label for="name" class="left">Name</label>
+                                                                                            <input type="text" name="name" class="form-control">
+                                                                                        </div>
+                                                                                        <div class="form-line">
+                                                                                            <label for="title" class="left">Title</label>
+                                                                                            <input type="text" name="title" class="form-control">
+                                                                                        </div>
+
+                                                                                        <div class="form-line center">
+                                                                                            <button class="btn-default1 btn canceladdReporting" value="Cancel">Cancel</button>
+                                                                                            <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <!-- Basic Examples -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="">
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                    <div class="panel-group" id="accordion_2" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel">
+                                                            <div class="panel-heading profile_direct" role="tab" id="headingOne_2">
+                                                                <h4 class="panel-title">
+                                                                    <a role="button" data-toggle="collapse" data-parent="#accordion_2" href="#collapseOne_2" aria-expanded="true" aria-controls="collapseOne_2">
+                                                                            Direct Reportees
+                                                                        </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseOne_2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_2">
+                                                                <div class="panel-body profile_edit">
+                                                                    <div class="rightSetting">
+                                                                        <!-- <p class="left">Direct Reportees</p> -->
+                                                                        <a href="#" id="directAdd">
+                                                                            <p class="right">Add</p>
+                                                                        </a>
+                                                                        <ul class="setting-list direct-default list-unstyled m-t-20">
+                                                                            <li class="row reportingRow">
+                                                                                <div class="col-md-3 p-b-10">
+                                                                                    <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig6.jpg">
+                                                                                </div>
+                                                                                <div class="col-md-7 p-t-5">
+                                                                                    <p class="center name">Karthick</p>
+                                                                                    <p class="center grey1">Manager</p>
+
+                                                                                </div>
+                                                                                <div class="col-md-1" style="float: right;">
+                                                                                    <a href="#" class="directEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                </div>
+                                                                            </li>
+                                                                            <li class="row reportingRow">
+                                                                                <div class="col-md-3 p-b-10">
+                                                                                    <img _ngcontent-hhc-c5="" alt="user" width="110" class="rounded-circle" src="../../assets/images/user/usrbig9.jpg">
+                                                                                </div>
+                                                                                <div class="col-md-7 p-t-5">
+                                                                                    <p class="center name">Naren</p>
+                                                                                    <p class="center grey1">Designer</p>
+
+                                                                                </div>
+                                                                                <div class="col-md-1" style="float: right;">
+                                                                                    <a href="#" class="directEdit"><i class="fas fa-pencil-alt" style="font-size: 14px"></i></a>
+                                                                                </div>
+                                                                            </li>
+                                                                        </ul>
+                                                                        <ul class="setting-list direct-replace-add list-unstyled m-t-20" style="display:none">
+                                                                            <li class="row">
+                                                                                <form id="directAddForm">
+                                                                                    <div class="form-group">
+                                                                                        <div class="form-line center profile-pic">
+                                                                                            <img _ngcontent-hhc-c5="" alt="user" width="60" class="rounded-circle" src="../../assets/images/user/usrbig7.jpg">
+                                                                                            <input id="directImageUpload" type="file" name="profile_photo1" placeholder="Photo" required="" capture="">
+                                                                                            <div class="edit1"><a href="#"><i class="fa fa-pencil-alt"></i></a></div>
+
+                                                                                        </div>
+                                                                                        <div class="form-line">
+                                                                                            <label for="name" class="left">Name</label>
+                                                                                            <input type="text" name="name" class="form-control">
+                                                                                        </div>
+                                                                                        <div class="form-line">
+                                                                                            <label for="title" class="left">Title</label>
+                                                                                            <input type="text" name="title" class="form-control">
+                                                                                        </div>
+
+                                                                                        <div class="form-line center">
+                                                                                            <button class="btn-default1 btn canceladdDirect" value="Cancel">Cancel</button>
+                                                                                            <button class="btn-default btn-black" value="Submit">Submit</button>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </form>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row clearfix">
+                                <!-- Basic Examples -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="">
+                                        <div class="body">
+                                            <div class="row clearfix">
+                                                <div class="col-xs-12 ol-sm-12 col-md-12 col-lg-12">
+                                                    <div class="panel-group" id="accordion_3" role="tablist" aria-multiselectable="true">
+                                                        <div class="panel">
+                                                            <div class="panel-heading profile_responsilities" role="tab" id="headingOne_3">
+                                                                <h4 class="panel-title">
+                                                                    <a role="button" data-toggle="collapse" data-parent="#accordion_3" href="#collapseOne_3" aria-expanded="true" aria-controls="collapseOne_3">
+                                                                            My Responsibilities
+                                                                        </a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseOne_3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne_3">
+                                                                <div class="panel-body profile_edit">
+                                                                    <ul class="ml-menu profile_accordion">
+                                                                        <li>
+                                                                            <a href="#">My KPI's</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">My Initiatives</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">My Activities</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">My Tasks</a>
+                                                                        </li>
+                                                                        <li>
+                                                                            <a href="#">My Forms</a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 6px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 0px; z-index: 99; right: 1px; height: 482px;"></div>
+                            <div class="slimScrollRail" style="width: 6px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div> -->
+                    </div>
+                </div>
+                <div role="tabpanel" class="tab-pane stretchRight" id="settings">
+                    <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto;">
+                        <div class="demo-settings" style="overflow: hidden; width: auto; height: auto;">
+                            <p>GENERAL SETTINGS</p>
+                            <ul class="setting-list">
+                                <li>
+                                    <span>Report Panel Usage</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox" checked="">
+                                            <span class="lever switch-col-green"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Email Redirect</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="lever switch-col-blue"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>SYSTEM SETTINGS</p>
+                            <ul class="setting-list">
+                                <li>
+                                    <span>Notifications</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox" checked="">
+                                            <span class="lever switch-col-purple"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Auto Updates</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox" checked="">
+                                            <span class="lever switch-col-cyan"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                            <p>ACCOUNT SETTINGS</p>
+                            <ul class="setting-list">
+                                <li>
+                                    <span>Offline</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox" checked="">
+                                            <span class="lever switch-col-red"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>Location Permission</span>
+                                    <div class="switch">
+                                        <label>
+                                            <input type="checkbox">
+                                            <span class="lever switch-col-lime"></span>
+                                        </label>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slimScrollBar" style="background: rgba(0, 0, 0, 0.5); width: 6px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 0px; z-index: 99; right: 1px;"></div>
+                        <div class="slimScrollRail" style="width: 6px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 0px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!-- #END# Right Sidebar -->
+
+        <section class="content">
+            <div class="container-fluid">
+                <div id="tree"></div>
+            </div>
+        </section>
+    </div>
+    <!-- Plugins Js -->
+    <script src="../../assets/js/app.min.js"></script>
+    <script src="../../assets/js/widgets.js"></script>
+    <!-- Custom Js -->
+    <script src="../../assets/js/admin.js"></script>
+    <script src="../../assets/js/bundles/amcharts4/core.js"></script>
+    <script src="../../assets/js/bundles/amcharts4/charts.js"></script>
+    <script src="../../assets/js/bundles/amcharts4/animated.js"></script>
+    <script src="../../assets/js/pages/dashboard/dashboard3.js"></script>
+    <!-- Knob Js -->
+    <script src="../../assets/js/pages/todo/todo.js"></script>
+    <script src="../../assets/js/bundles/datamaps/d3.min.js"></script>
+    <script src="../../assets/js/bundles/datamaps/topojson.min.js"></script>
+    <script src="../../assets/js/bundles/datamaps/datamaps.world.min.js"></script>
+    <script src="../../assets/js/pages/maps/datamap.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../assets/js/jquery.treegrid.js"></script>
+    <script type="text/javascript" src="../../assets/js/bootstrap-treefy.js"></script>
+    <script src="../../assets/js/OrgChart.js"></script>
+    <script src="../../assets/knockout-3.5.0.js"></script>
+    <script src="../../assets/jquery-ui.min.js"></script>
+    <script src="../../assets/moment.js"></script>
+    <script src="../../assets/daterangepicker/daterangepicker.min.js"></script>
+    <!-- <script src="../../assets/jquery.comiseo.daterangepicker.js"></script> -->
+
+    <script>
+        var chart;
+        window.onload = function() {
+            OrgChart.templates.ula.field_0 = '<text class="field_0"  style="font-size: 14px;" x="100" y="40">{val}</text>';
+            OrgChart.templates.ula.field_1 = '<text class="field_1"  style="font-size: 12px;" x="100" y="60">{val}</text>';
+            OrgChart.templates.ula.field_2 = '<text class="field_2"  style="font-size: 12px;" x="100" y="80">{val}</text>';
+            OrgChart.templates.ula.field_3 = '<defs><mask id="mask"><rect width="100%" height="100%" x="-50%" y="0" fill="#fff"></rect></mask></defs><rect class="bg" width="100" height="5" rx="4" x="100" y="90"></rect><g mask="url(#mask)"><rect class="fill" width="{val}" height="5" rx="4" x="100" y="90"></rect></g>';
+            OrgChart.templates.ula.score = '<g transform="matrix(0.06,0,0,0.05,130,10)"><a id="btn1" target="_blank" xlink:href="{val}"><rect x="-12" y="-60" style="fill:#9e9e9e;" height="300" width="600" rx="100" ry="172"></rect><text x="280" y="117" dominant-baseline="middle" text-anchor="middle" style="color:#fff;font-size: 190px;">Sco...</text></a></g>';
+            OrgChart.templates.ula.ini = '<g transform="matrix(0.06,0,0,0.05,175,10)"><a id="btn2" target="_blank" xlink:href="{val}"><rect x="-12" y="-60" style="fill:#9e9e9e;" height="300" width="600" rx="100" ry="172"></rect><text x="280" y="117" dominant-baseline="middle" text-anchor="middle" style="color:#fff;font-size: 190px;">Ini...</text></a></g>';
+            OrgChart.templates.ula.board = '<g transform="matrix(0.06,0,0,0.05,220,10)"><a id="btn3" target="_blank" xlink:href="{val}"><rect x="-12" y="-60" style="fill:#9e9e9e;" height="300" width="600" rx="100" ry="172"></rect><text x="280" y="117" dominant-baseline="middle" text-anchor="middle" style="color:#fff;font-size: 190px;">Boa...</text></a></g>';
+
+
+            chart = new OrgChart(document.getElementById("tree"), {
+                template: "ula",
+                layout: OrgChart.mixed,
+                mouseScrool: OrgChart.none,
+                scaleInitial: BALKANGraph.match.height,
+                enableSearch: false,
+                enableDragDrop: true,
+                toolbar: false,
+                nodeMenu: {
+
+                    add: {
+                        text: "Add New"
+                    },
+                    edit: {
+                        text: "Edit"
+                    },
+                    remove: {
+                        text: "Remove"
+                    },
+                },
+                nodeBinding: {
+                    field_0: "name",
+                    field_1: "title",
+                    field_2: "dept",
+                    field_3: "progress",
+                    img_0: "img",
+                    score: "score",
+                    ini: "ini",
+                    board: "board"
+                },
+                nodes: [{
+                    id: "1",
+                    name: "Jack Hill",
+                    title: "Chairman and CEO",
+                    dept: "Management",
+                    progress: "20",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    email: "amber@domain.com",
+                    img: "https://balkangraph.com/js/img/1.jpg"
+                }, {
+                    id: "2",
+                    pid: "1",
+                    name: "Lexie Cole",
+                    title: "QA Lead",
+                    dept: "Quality",
+                    progress: "40",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    email: "ava@domain.com",
+                    img: "https://balkangraph.com/js/img/2.jpg"
+                }, {
+                    id: "3",
+                    pid: "1",
+                    name: "Janae Barrett",
+                    title: "Technical Director",
+                    dept: "Technical",
+                    progress: "30",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/3.jpg"
+                }, {
+                    id: "4",
+                    pid: "1",
+                    name: "Aaliyah Webb",
+                    title: "Manager",
+                    dept: "Management",
+                    progress: "60",
+                    email: "jay@domain.com",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/4.jpg"
+                }, {
+                    id: "5",
+                    pid: "2",
+                    name: "Elliot Ross",
+                    title: "QA",
+                    dept: "Quality",
+                    progress: "50",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/5.jpg"
+                }, {
+                    id: "6",
+                    pid: "2",
+                    name: "Anahi Gordon",
+                    title: "QA",
+                    dept: "Quality",
+                    progress: "80",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/6.jpg"
+                }, {
+                    id: "7",
+                    pid: "2",
+                    name: "Knox Macias",
+                    title: "QA",
+                    dept: "Quality",
+                    progress: "90",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/7.jpg"
+                }, {
+                    id: "8",
+                    pid: "3",
+                    name: "Nash Ingram",
+                    title: ".NET Team Lead",
+                    dept: "Production",
+                    progress: "70",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    email: "kohen@domain.com",
+                    img: "https://balkangraph.com/js/img/8.jpg"
+                }, {
+                    id: "9",
+                    pid: "3",
+                    name: "Sage Barnett",
+                    title: "JS Team Lead",
+                    dept: "Production",
+                    progress: "65",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/9.jpg"
+                }, {
+                    id: "10",
+                    pid: "8",
+                    name: "Alice Gray",
+                    title: "Programmer",
+                    dept: "Production",
+                    progress: "90",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/10.jpg"
+                }, {
+                    id: "11",
+                    pid: "8",
+                    name: "Anne Ewing",
+                    title: "Programmer",
+                    dept: "Production",
+                    progress: "35",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/11.jpg"
+                }, {
+                    id: "12",
+                    pid: "9",
+                    name: "Reuben Mcleod",
+                    title: "Programmer",
+                    dept: "Production",
+                    progress: "60",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/12.jpg"
+                }, {
+                    id: "13",
+                    pid: "9",
+                    name: "Ariel Wiley",
+                    title: "Programmer",
+                    dept: "Production",
+                    progress: "30",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/13.jpg"
+                }, {
+                    id: "14",
+                    pid: "4",
+                    name: "Lucas West",
+                    title: "Marketer",
+                    dept: "Sales",
+                    progress: "50",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/14.jpg"
+                }, {
+                    id: "15",
+                    pid: "4",
+                    name: "Adan Travis",
+                    title: "Designer",
+                    dept: "Production",
+                    progress: "55",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/15.jpg"
+                }, {
+                    id: "16",
+                    pid: "4",
+                    name: "Alex Snider",
+                    title: "Sales Manager",
+                    dept: "Sales",
+                    progress: "65",
+                    score: "#",
+                    ini: "#",
+                    board: "#",
+                    img: "https://balkangraph.com/js/img/16.jpg"
+                }]
+            });
+
+            function preview() {
+                OrgChart.pdfPrevUI.show(chart, {
+                    format: 'A4'
+                });
+            }
+
+
+        };
+        $(".daterangepicker-field").daterangepicker({
+            forceUpdate: true,
+            callback: function(startDate, endDate, period) {
+                var title = startDate.format('L') + ' – ' + endDate.format('L');
+                $(this).val(title)
+            }
+        });
+    </script>
+</body>
